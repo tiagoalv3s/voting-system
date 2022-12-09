@@ -7,18 +7,22 @@ void opening(){
 }
 
 void presNumbers(){
+    printf("|----------------------|\n");
     printf("| CANDIDATE\tNUMBER |\n");
     printf("|----------------------|\n");
     printf("| Candidate 1\t%6d |\n", 11);
     printf("| Candidate 2\t%6d |\n", 22);
     printf("| Candidate 3\t%6d |\n", 33);
+    printf("|----------------------|\n");
 }
 
 void govNumbers(){
+    printf("|----------------------|\n");
     printf("| CANDIDATE\tNUMBER |\n");
     printf("|----------------------|\n");
     printf("| Candidate 1\t%6d |\n", 10);
     printf("| Candidate 2\t%6d |\n", 20);
+    printf("|----------------------|\n");
 }
 int main(){
     int presCandidate1, presCandidate2, presCandidate3, govCandidate1, govCandidate2, userVote;
