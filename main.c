@@ -14,13 +14,22 @@ void presNumbers(){
     printf("| Candidate 3\t%6d |\n", 33);
 }
 
+void govNumbers(){
+    printf("| CANDIDATE\tNUMBER |\n");
+    printf("|----------------------|\n");
+    printf("| Candidate 1\t%6d |\n", 10);
+    printf("| Candidate 2\t%6d |\n", 20);
+}
 int main(){
     int presCandidate1, presCandidate2, presCandidate3, govCandidate1, govCandidate2, userVote;
     
     opening();
+    
     presNumbers();    
-
-    printf("\nType in the number of your president candidate:\n");
-
+    printf("\nType in the number of your president candidate:\n\n");
+    
+    govNumbers();
+    printf("\nType in the number of your governor candidate:\n\n");
+    
     return 0;
 }
