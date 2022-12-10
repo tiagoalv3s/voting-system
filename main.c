@@ -82,8 +82,8 @@ int main(){
     presNumbers();    
     votePres();
     
-    voteGov();
     govNumbers();
-
+    voteGov();
+    
     return 0;
 }
