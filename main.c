@@ -84,6 +84,7 @@ int main(){
     
     govNumbers();
     voteGov();
-    
+
+    printf("Done! Thanks for voting!\n");    
     return 0;
 }
