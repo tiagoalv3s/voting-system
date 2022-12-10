@@ -28,23 +28,28 @@ void govNumbers(){
 }
 
 int vote1(){
-    printf("\nType in the number of your president candidate:\n\n");
-    scanf("%d", &userVote);
-    switch (userVote)
-    {
-    case 11:
-        printf("You voted for Candidate 1\n\n");
-        break;
-    case 22:
-        printf("You voted for Candidate 2\n\n");
-        break;
-    case 33:
-        printf("You voted for Candidate 3\n\n");
-        break;    
-    default:
-        printf("You voted NULL\n\n");
-        break;
-    }
+    char confirmation;
+    do{
+        printf("\nType in the number of your president candidate:\n\n");
+        scanf("%d", &userVote);
+        switch (userVote)
+        {
+        case 11:
+            printf("You voted for Candidate 1\n\n");
+            break;
+        case 22:
+            printf("You voted for Candidate 2\n\n");
+            break;
+        case 33:
+            printf("You voted for Candidate 3\n\n");
+            break;    
+        default:
+            printf("You voted NULL\n\n");
+            break;
+        }
+        printf("Do you confirm that?(Y/N)");
+        scanf(" %c", &confirmation);
+    }while(confirmation == 78); // Confirmation using ANSI code of N.
 }
 
 int main(){
