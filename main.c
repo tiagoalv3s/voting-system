@@ -24,17 +24,38 @@ void govNumbers(){
     printf("| Candidate 2\t%6d |\n", 20);
     printf("|----------------------|\n");
 }
+
+int vote1(){
+    printf("\nType in the number of your president candidate:\n\n");
+    scanf("%d", &userVote);
+    switch (userVote)
+    {
+    case 11:
+        printf("You voted for Candidate 1\n\n");
+        break;
+    case 22:
+        printf("You voted for Candidate 2\n\n");
+        break;
+    case 33:
+        printf("You voted for Candidate 3\n\n");
+        break;    
+    default:
+        printf("You voted NULL\n\n");
+        break;
+    }
+}
+
 int main(){
     int presCandidate1, presCandidate2, presCandidate3, govCandidate1, govCandidate2, userVote;
     
     opening();
     
     presNumbers();    
-    printf("\nType in the number of your president candidate:\n\n");
-    scanf("%d", &userVote);
+    
+    vote1();
 
     govNumbers();
     printf("\nType in the number of your governor candidate:\n\n");
-    scanf("%d", &userVote);
+    scanf("%d\n", &userVote);
     return 0;
 }
