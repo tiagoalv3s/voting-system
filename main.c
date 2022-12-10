@@ -31,9 +31,10 @@ int main(){
     
     presNumbers();    
     printf("\nType in the number of your president candidate:\n\n");
-    
+    scanf("%d", &userVote);
+
     govNumbers();
     printf("\nType in the number of your governor candidate:\n\n");
-    
+    scanf("%d", &userVote);
     return 0;
 }
