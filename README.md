@@ -2,11 +2,14 @@
 A voting system in C language.
 <br/><br/> 
 ### USER STORIES
-- [ ] User can see a list of candidates he can vote in.
+- [x] User can see a list of candidates he can vote in.
 - [ ] User can vote in a specific candidate or null.
 - [ ] Votes are stored in a text file.
 
-### BONUS FEATURES
+### IMPROVEMENTS
+- [ ] Do not accept invalid characters when prompted for type data.
+
+### BONUS FEATURES FOR FUTURE UPDATE
 - [ ] A log of the votes containing date and hour of each vote.
     - Log is a protected text file.
 - [ ] User can enter in counting mode to see the results of election.
