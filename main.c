@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+int userVote;
+
 void opening(){
     printf("\n|***************************************|\n");
     printf("|__________ VOTING SYSTEM 1.0 __________|\n");
@@ -46,7 +48,7 @@ int vote1(){
 }
 
 int main(){
-    int presCandidate1, presCandidate2, presCandidate3, govCandidate1, govCandidate2, userVote;
+    int presCandidate1, presCandidate2, presCandidate3, govCandidate1, govCandidate2;
     
     opening();
     
