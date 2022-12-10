@@ -27,7 +27,7 @@ void govNumbers(){
     printf("|----------------------|\n");
 }
 
-int vote1(){
+int votePres(){
     char confirmation;
     do{
         printf("\nType in the number of your president candidate:\n\n");
@@ -59,7 +59,7 @@ int main(){
     
     presNumbers();    
     
-    vote1();
+    votePres();
 
     govNumbers();
     printf("\nType in the number of your governor candidate:\n\n");
