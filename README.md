@@ -10,8 +10,8 @@ A voting system in C language.
 - [ ] Do not accept invalid characters when prompted for type data.
 
 ### BONUS FEATURES FOR FUTURE UPDATE
-- [ ] A log of the votes containing date and hour of each vote.
-    - Log is a protected text file.
+- [x] A log of the votes containing date and hour of each vote.
+- [ ] Log is a protected text file.
 - [ ] User can enter in counting mode to see the results of election.
-    - Counting mode is protected by a password.
+- [ ] Counting mode is protected by a password.
 - [ ] User can see a image of the candidate to confirm he’s voting in the right candidate.
