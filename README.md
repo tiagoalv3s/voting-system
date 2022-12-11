@@ -3,8 +3,8 @@ A voting system in C language.
 <br/><br/> 
 ### USER STORIES
 - [x] User can see a list of candidates he can vote in.
-- [ ] User can vote in a specific candidate or null.
-- [ ] Votes are stored in a text file.
+- [x] User can vote in a specific candidate or null.
+- [x] Votes are stored in a text file.
 
 ### IMPROVEMENTS
 - [ ] Do not accept invalid characters when prompted for type data.
