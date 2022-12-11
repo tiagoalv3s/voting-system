@@ -6,11 +6,12 @@ int userVote;
 void opening(){
     printf("\n|***************************************|\n");
     printf("|__________ VOTING SYSTEM 1.0 __________|\n");
-    printf("|_______________________________________|\n\n");
+    printf("|_______________________________________|\n");
 }
 
+// Show number of candidates
 int numbers(int position){
-    printf("\t|-----------------------|\n");
+    printf("\n\t|-----------------------|\n");
     printf("\t| CANDIDATE\t NUMBER |\n");
     printf("\t|-----------------------|\n");
     if (position == 0){
@@ -101,7 +102,7 @@ int main(){
     voteGov();
     storeVote(1);
 
-    printf("Done! Thanks for voting!\n\n");
+    printf("\n   ***** DONE! THANKS FOR VOTING! *****\n\n");
     
     return 0;
 }
