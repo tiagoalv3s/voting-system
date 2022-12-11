@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <time.h>
 
 int userVote;
 
@@ -77,10 +78,12 @@ int voteGov(){
 int storeVote(int position){ // Evaluates wether to store the vote as President or Governor.
     FILE *flpt;
     flpt = fopen("logVotes.txt", "a+");
+    time_t hour = time(NULL);
+    char *stringHour = ctime(&hour);
     if (position == 0){
-        fprintf(flpt, "President: %d\n", userVote);
+        fprintf(flpt, "President: %d\t\t%s\n", userVote, stringHour);
     }else{
-        fprintf(flpt, "Governor: %d\n", userVote); 
+        fprintf(flpt, "Governor: %d\t\t%s\n", userVote, stringHour); 
     }
     fclose(flpt);
 }
