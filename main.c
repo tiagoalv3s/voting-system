@@ -74,6 +74,17 @@ int voteGov(){
     }while(confirmation == 'N' || confirmation == 'n');
 }
 
+int storeVote(int position){ // Evaluates wether to store the vote as President or Governor.
+    FILE *flpt;
+    flpt = fopen("logVotes.txt", "a+");
+    if (position == 0){
+        fprintf(flpt, "President: %d\n", userVote);
+    }else{
+        fprintf(flpt, "Governor: %d\n", userVote); 
+    }
+    fclose(flpt);
+}
+
 int main(){
     int presCandidate1, presCandidate2, presCandidate3, govCandidate1, govCandidate2;
     
@@ -81,9 +92,11 @@ int main(){
     
     presNumbers();    
     votePres();
-    
+    storeVote(0);
+
     govNumbers();
     voteGov();
+    storeVote(1);
 
     printf("Done! Thanks for voting!\n");
     
