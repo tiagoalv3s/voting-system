@@ -9,7 +9,7 @@ void opening(){
     printf("|_______________________________________|\n");
 }
 
-// Show number of candidates
+// Show number of candidates.
 int numbers(int position){
     printf("\n\t|-----------------------|\n");
     printf("\t| CANDIDATE\t NUMBER |\n");
@@ -26,7 +26,7 @@ int numbers(int position){
     }    
 }
 
-// Initialize and confirm user vote for president.
+// Initialize and confirm user vote for President.
 int votePres(){
     char confirmation;
     do{
@@ -52,7 +52,7 @@ int votePres(){
     }while(confirmation == 'N' || confirmation == 'n');
 }
 
-// Initialize and confirm user vote for governor.
+// Initialize and confirm user vote for Governor.
 int voteGov(){
     char confirmation;
     do{
@@ -100,7 +100,7 @@ int main(){
     voteGov();
     storeVote(1);
 
-    printf("\n   ***** DONE! THANKS FOR VOTING! *****\n\n");
+    printf("\n   ***** DONE! THANKS FOR VOTING! *****\n\n");    
     
     return 0;
 }
