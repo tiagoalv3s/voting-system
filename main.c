@@ -28,6 +28,7 @@ void govNumbers(){
     printf("\t|-----------------------|\n");
 }
 
+// Initialize and confirm user vote for president.
 int votePres(){
     char confirmation;
     do{
@@ -53,6 +54,7 @@ int votePres(){
     }while(confirmation == 'N' || confirmation == 'n');
 }
 
+// Initialize and confirm user vote for governor.
 int voteGov(){
     char confirmation;
     do{
@@ -75,7 +77,8 @@ int voteGov(){
     }while(confirmation == 'N' || confirmation == 'n');
 }
 
-int storeVote(int position){ // Evaluates wether to store the vote as President or Governor.
+// Store the vote as President or Governor with data and hour.
+int storeVote(int position){ 
     time_t hour = time(NULL);
     char *stringHour = ctime(&hour);
     FILE *flpt;
@@ -101,7 +104,7 @@ int main(){
     voteGov();
     storeVote(1);
 
-    printf("Done! Thanks for voting!\n");
+    printf("Done! Thanks for voting!\n\n");
     
     return 0;
 }
