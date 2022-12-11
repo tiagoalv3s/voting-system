@@ -9,23 +9,20 @@ void opening(){
     printf("|_______________________________________|\n\n");
 }
 
-void presNumbers(){
+int numbers(int position){
     printf("\t|-----------------------|\n");
     printf("\t| CANDIDATE\t NUMBER |\n");
     printf("\t|-----------------------|\n");
-    printf("\t| Candidate 1\t %6d |\n", 11);
-    printf("\t| Candidate 2\t %6d |\n", 22);
-    printf("\t| Candidate 3\t %6d |\n", 33);
-    printf("\t|-----------------------|\n");
-}
-
-void govNumbers(){
-    printf("\n\t|-----------------------|\n");
-    printf("\t| CANDIDATE\t NUMBER |\n");
-    printf("\t|-----------------------|\n");
-    printf("\t| Candidate 1\t %6d |\n", 10);
-    printf("\t| Candidate 2\t %6d |\n", 20);
-    printf("\t|-----------------------|\n");
+    if (position == 0){
+        printf("\t| Candidate 1\t %6d |\n", 11);
+        printf("\t| Candidate 2\t %6d |\n", 22);
+        printf("\t| Candidate 3\t %6d |\n", 33);
+        printf("\t|-----------------------|\n");
+    }else{
+        printf("\t| Candidate 1\t %6d |\n", 10);
+        printf("\t| Candidate 2\t %6d |\n", 20);
+        printf("\t|-----------------------|\n");
+    }    
 }
 
 // Initialize and confirm user vote for president.
@@ -96,11 +93,11 @@ int main(){
     
     opening();
     
-    presNumbers();    
+    numbers(0);    
     votePres();
     storeVote(0);
 
-    govNumbers();
+    numbers(1);
     voteGov();
     storeVote(1);
 
