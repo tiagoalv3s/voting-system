@@ -49,7 +49,7 @@ int votePres(){
         }
         printf("Do you confirm that?(Y/N): ");
         scanf(" %c", &confirmation);
-    }while(confirmation == 78 || 110); // Confirmation using ANSI code of N.
+    }while(confirmation == 'N' || confirmation == 'n');
 }
 
 int voteGov(){
@@ -71,7 +71,7 @@ int voteGov(){
         }
         printf("Do you confirm that?(Y/N): ");
         scanf(" %c", &confirmation);
-    }while(confirmation == 78 || 110); // Confirmation using ANSI code of N.
+    }while(confirmation == 'N' || confirmation == 'n');
 }
 
 int main(){
