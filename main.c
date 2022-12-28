@@ -1,7 +1,29 @@
 #include <stdio.h>
 #include <time.h>
 
+void opening();
+int numbers(int position);
+int votePres();
+int voteGov();
+int storeVote(int position);
+
 int userVote;
+
+int main(){    
+    opening();
+    
+    numbers(0);    
+    votePres();
+    storeVote(0);
+
+    numbers(1);
+    voteGov();
+    storeVote(1);
+
+    printf("\n   ***** DONE! THANKS FOR VOTING! *****\n\n");    
+    
+    return 0;
+}
 
 void opening(){
     printf("\n|***************************************|\n");
@@ -87,20 +109,4 @@ int storeVote(int position){
         fprintf(flpt, "Governor: %d\t\t%s\n", userVote, stringHour); 
     }
     fclose(flpt);
-}
-
-int main(){    
-    opening();
-    
-    numbers(0);    
-    votePres();
-    storeVote(0);
-
-    numbers(1);
-    voteGov();
-    storeVote(1);
-
-    printf("\n   ***** DONE! THANKS FOR VOTING! *****\n\n");    
-    
-    return 0;
 }
