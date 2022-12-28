@@ -9,7 +9,8 @@ int storeVote(int position);
 
 int userVote;
 
-int main(){    
+int main()
+{    
     opening();
     
     numbers(0);    
@@ -21,18 +22,19 @@ int main(){
     storeVote(1);
 
     printf("\n   ***** DONE! THANKS FOR VOTING! *****\n\n");    
-    
     return 0;
 }
 
-void opening(){
+void opening()
+{
     printf("\n|***************************************|\n");
     printf("|__________ VOTING SYSTEM 1.0 __________|\n");
     printf("|_______________________________________|\n");
 }
 
 // Show number of candidates.
-int numbers(int position){
+int numbers(int position)
+{
     printf("\n\t|-----------------------|\n");
     printf("\t| CANDIDATE\t NUMBER |\n");
     printf("\t|-----------------------|\n");
@@ -49,7 +51,8 @@ int numbers(int position){
 }
 
 // Initialize and confirm user vote for President.
-int votePres(){
+int votePres()
+{
     char confirmation;
     do{
         printf("\nType in the number of your PRESIDENT candidate: ");
@@ -75,7 +78,8 @@ int votePres(){
 }
 
 // Initialize and confirm user vote for Governor.
-int voteGov(){
+int voteGov()
+{
     char confirmation;
     do{
         printf("\nType in the number of your GOVERNOR candidate: ");
@@ -98,7 +102,8 @@ int voteGov(){
 }
 
 // Store the vote as President or Governor with data and hour.
-int storeVote(int position){ 
+int storeVote(int position)
+{ 
     time_t hour = time(NULL);
     char *stringHour = ctime(&hour);
     FILE *flpt;
