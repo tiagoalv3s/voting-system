@@ -8,7 +8,7 @@ A voting system in C language.
 
 ### IMPROVEMENTS
 - [ ] Do not accept invalid characters when prompted for type data.
-- [ ] Security improvements
+- [ ] Security improvements.
 
 ### BONUS FEATURES FOR FUTURE UPDATE
 - [x] A log of the votes containing date and hour of each vote.
