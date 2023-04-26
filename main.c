@@ -93,21 +93,30 @@ void voteGov()
     char confirmation;
     do{
         printf("\nType in the number of your GOVERNOR candidate: ");
-        scanf("%d", &userVote);
-        switch (userVote)
+        int numRead = scanf("%d", &userVote);
+        
+        if (numRead == 0)
         {
-        case 10:
-            printf("You voted for Candidate 1\n");
-            break;
-        case 20:
-            printf("You voted for Candidate 2\n");
-            break;  
-        default:
-            printf("You voted NULL\n");
-            break;
+            printf("Invalid number\n");
+            while (getchar() != '\n');
         }
+        else
+        {
+            switch (userVote)
+            {
+            case 10:
+                printf("You voted for Candidate 1\n");
+                break;
+            case 20:
+                printf("You voted for Candidate 2\n");
+                break;  
+            default:
+                printf("You voted NULL\n");
+                break;
+            }
         printf("Do you confirm that?(Y/N): ");
         scanf(" %c", &confirmation);
+        }
     }while(confirmation == 'N' || confirmation == 'n');
 }
 
