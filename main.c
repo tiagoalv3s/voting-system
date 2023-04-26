@@ -2,12 +2,11 @@
 #include <time.h>
 
 void opening();
-int numbers(int position);
-int votePres();
-int voteGov();
-int storeVote(int position);
+void numbers(int position);
+void votePres();
+void voteGov();
+void storeVote(int position);
 
-int userVote;
 
 int main()
 {    
@@ -33,7 +32,7 @@ void opening()
 }
 
 // Show number of candidates.
-int numbers(int position)
+void numbers(int position)
 {
     printf("\n\t|-----------------------|\n");
     printf("\t| CANDIDATE\t NUMBER |\n");
@@ -51,7 +50,7 @@ int numbers(int position)
 }
 
 // Initialize and confirm user vote for President.
-int votePres()
+void votePres()
 {
     char confirmation;
     do{
@@ -78,7 +77,7 @@ int votePres()
 }
 
 // Initialize and confirm user vote for Governor.
-int voteGov()
+void voteGov()
 {
     char confirmation;
     do{
@@ -102,7 +101,7 @@ int voteGov()
 }
 
 // Store the vote as President or Governor with data and hour.
-int storeVote(int position)
+void storeVote(int position)
 { 
     time_t hour = time(NULL);
     char *stringHour = ctime(&hour);
