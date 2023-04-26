@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <time.h>
+#include <ctype.h>
 
 void opening();
 void numbers(int position);
@@ -7,6 +8,7 @@ void votePres();
 void voteGov();
 void storeVote(int position);
 
+int userVote;
 
 int main()
 {    
@@ -55,24 +57,33 @@ void votePres()
     char confirmation;
     do{
         printf("\nType in the number of your PRESIDENT candidate: ");
-        scanf("%d", &userVote);
-        switch (userVote)
+        int numRead = scanf("%d", &userVote);
+        
+        if (numRead == 0)
         {
-        case 11:
-            printf("You voted for Candidate 1\n");
-            break;
-        case 22:
-            printf("You voted for Candidate 2\n");
-            break;
-        case 33:
-            printf("You voted for Candidate 3\n");
-            break;    
-        default:
-            printf("You voted NULL\n");
-            break;
+            printf("Invalid number\n");
+            while (getchar() != '\n');
         }
+        else
+        {
+            switch (userVote)
+            {
+            case 11:
+                printf("You voted for Candidate 1\n");
+                break;
+            case 22:
+                printf("You voted for Candidate 2\n");
+                break;
+            case 33:
+                printf("You voted for Candidate 3\n");
+                break;    
+            default:
+                printf("You voted NULL\n");
+                break;
+            }
         printf("Do you confirm that?(Y/N): ");
         scanf(" %c", &confirmation);
+        }
     }while(confirmation == 'N' || confirmation == 'n');
 }
 
