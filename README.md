@@ -7,7 +7,7 @@ A voting system in C language.
 - [x] Votes are stored in a text file.
 
 ### IMPROVEMENTS
-- [ ] Do not accept invalid characters when prompted for type data.
+- [x] Do not accept invalid characters when prompted for typing data.
 - [ ] Security improvements.
 
 ### BONUS FEATURES FOR FUTURE UPDATE
