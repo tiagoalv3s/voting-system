@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <time.h>
-#include <ctype.h>
 
 void opening();
 void numbers(int position);
