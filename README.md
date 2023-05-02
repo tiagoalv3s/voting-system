@@ -15,4 +15,5 @@ A voting system in C language.
 - [ ] Log is a protected text file.
 - [ ] User can enter in counting mode to see the results of election.
 - [ ] Counting mode is protected by a password.
-- [ ] User can see a image to confirm he’s voting in the right candidate.
+- [ ] GUI.
+- [ ] User can see a picture of the candidate.
